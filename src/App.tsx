@@ -1,8 +1,11 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import PublicRoutes from './routes/publicRoutes'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+// routes
+import PublicRoutes from './routes/PublicRoutes'
+import PrivateRoutes from './routes/PrivateRoutes'
+// pages
 import Home from './pages/Home'
-import PrivateRoutes from './routes/privateRoutes'
+import ProductDetails from './pages/ProductDetails'
 import Dashboard from './pages/Dashboard'
 
 
@@ -12,6 +15,7 @@ function App() {
       <Routes>
         <Route element={<PublicRoutes />}>
           <Route path='/' element={<Home />} />
+          <Route path='/product/:id' element={<ProductDetails />} />
         </Route>
         <Route element={<PrivateRoutes />}>
           <Route path='/dashboard' element={<Dashboard />} />
