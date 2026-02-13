@@ -7,6 +7,7 @@ import PrivateRoutes from './routes/PrivateRoutes'
 import Home from './pages/Home'
 import ProductDetails from './pages/ProductDetails'
 import Dashboard from './pages/Dashboard'
+import Login from './pages/Login'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route element={<PublicRoutes />}>
           <Route path='/' element={<Home />} />
           <Route path='/product/:id' element={<ProductDetails />} />
+          <Route path='/login' element={<Login />} />
         </Route>
         <Route element={<PrivateRoutes />}>
           <Route path='/dashboard' element={<Dashboard />} />

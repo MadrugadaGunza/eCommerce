@@ -1,5 +1,3 @@
-
-
 const Banner = () => {
     return (
         <section className="px-15 bg-neutral-100 grid gap-4 grid-cols-1 md:grid-cols-2">

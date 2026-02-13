@@ -36,7 +36,7 @@ const ProductDetails = () => {
             <article className='pt-4'>
                 <h2 className='font-semibold text-3xl mb-4'>{product?.title}</h2>
                 <p className='text-gray-500 text-lg text-justify'>{product?.description}</p>
-                <p className='text-lg mt-2'>R$ {product?.price}</p>
+                {product?.price && <p className='text-lg mt-2'>R$ {product?.price}</p>}
                 <div className='flex items-center gap-2 mt-4'>
                     <button className='bg-orange-600 text-white px-4 py-2 hover:bg-orange-700 flex items-center gap-2 transition-colors duration-300 cursor-pointer'>
                         <ShoppingCart className='w-5 h-5' />
